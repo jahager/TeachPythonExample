@@ -35,7 +35,7 @@ class StudentTestCase(unittest.TestCase):
 
 def suite():
     # Get all folder without \\
-    sum_assignments = [x.replace('\\', '') for x in glob.glob('[!_]*/')]
+    sum_assignments = [x.replace('\\', '').replace('/','') for x in glob.glob('[!_]*/')]
 
     suite = unittest.TestSuite()
     # Create a test for each student folder
